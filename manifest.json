@@ -3,6 +3,16 @@
   "name": "BackSnapper",
   "version": "1.0.0",
   "description": "When clicked, snaps back to the first page in a tab's history.",
+
+  // Define an icon set for the extension gallery
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "64": "images/icon64.png",
+    "128": "images/icon128.png"
+  },
+
+  // Define the toolbar button and tooltip
   "browser_action": {
     "default_icon": "images/toolbar_icon.png",
     "default_title": "BackSnapper"
