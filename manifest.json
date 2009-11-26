@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Snaps back to the first page in a tab's history.",
   "browser_action": {
-    "default_icon": "images/toolbar_icon.png"
+    "default_icon": "images/toolbar_icon.png",
+    "default_title": "BackSnapper"
   }
 }
