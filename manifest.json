@@ -1,9 +1,26 @@
 {
+  // Extension metadata
   "name": "BackSnapper",
   "version": "1.0.0",
-  "description": "Snaps back to the first page in a tab's history.",
+  "description": "When clicked, snaps back to the first page in a tab's history.",
   "browser_action": {
     "default_icon": "images/toolbar_icon.png",
     "default_title": "BackSnapper"
-  }
+  },
+
+  // Allow the chrome.tabs API
+  "permissions": [
+    "tabs"
+  ],
+
+  // Load extension background code
+  "background_page": "background.html",
+
+  // Inject code into all web pages
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["backsnapper.js"]
+    }
+  ]
 }

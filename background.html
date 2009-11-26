@@ -1,0 +1,16 @@
+<html>
+<head>
+<script>
+// Snaps a tab's history back to its first entry
+function snapBack(tab) {
+  // Execute the injected BackSnapper content script in the specified tab
+  chrome.tabs.sendRequest(tab.id, {}, function(response) {
+    console.log("snap back complete in tab " + tab.id);
+  });
+}
+
+// Add a handler for when the BackSnapper button is clicked
+chrome.browserAction.onClicked.addListener(snapBack);
+</script>
+</head>
+</html>
