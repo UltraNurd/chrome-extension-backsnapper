@@ -5,7 +5,7 @@
 function snapBack(tab) {
   // Execute the injected BackSnapper content script in the specified tab
   chrome.tabs.sendRequest(tab.id, {}, function(response) {
-    console.log("snap back complete in tab " + tab.id);
+    console.log("tab " + tab.id + " snapped back to " + response.index);
   });
 }
 
